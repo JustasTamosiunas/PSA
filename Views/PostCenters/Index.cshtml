@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication1.Models.PostCenter>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/PostCenter.css" />
+
+<h1>Pašto Centrai</h1>
+
+<p>
+    <a asp-action="Create">Pridėti naują</a>
+</p>
+
+<div id="postCenterList">
+    @foreach (var item in Model)
+    {
+        <div id="postCenter">
+            <img id="postCenterThumbnail" src="material/postCenter/postCenter.svg"/>
+            <div id="postCenterName" class="postCenterDetail">@item.Name</div>
+            <div id="postCenterAddress" class="postCenterDetail">@(item.Street + " " + item.BuildingNo + ", " + item.City)</div>
+            <div id="postCenterActions"> 
+                <a id="postCenterDetailsButton" asp-action="Details" asp-route-id="@item.Id">Detalės</a>
+                <a id="postCenterDeleteButton" asp-action="Delete" asp-route-id="@item.Id"><img id="postCenterDeleteIcon" src="material/postCenter/postCenterDelete.svg"/></a>
+            </div>
+        </div>
+    }
+</div>

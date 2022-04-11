@@ -1,0 +1,62 @@
+﻿#postCenterList {
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#postCenter {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: end;
+    height: 250px;
+    align-items: center;
+    margin: 0.5em
+}
+
+#postCenterThumbnail {
+    height: 60%;
+    width: 100%;
+    border-bottom: 2px solid grey;
+}
+
+#postCenterActions {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#postCenterDetailsButton {
+    background-color: #24a0ed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#postCenterDeleteIcon {
+    height: 20px;
+    filter: invert();
+}
+
+#postCenterDeleteButton {
+    height: 100%;
+    display: block;
+    width: 30%;
+    background-color: #c70000;
+    border-radius: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postCenterDetail {
+    text-overflow: ellipsis;
+}
